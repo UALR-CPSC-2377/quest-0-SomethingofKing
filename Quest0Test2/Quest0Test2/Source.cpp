@@ -101,7 +101,10 @@ bool isGameSuccessful(string currentGuess) {
 }
 
 void printGameOver(string currentGuess) {
-
+	if (/*isGameSuccessful is true*/) {
+		cout << "CONGRATS";
+	}
+	else { cout << "YOU FAILED"; }
 	/*
 		This function will print out the game board with a message at the bottom
 		"CONGRATS" if the the player was successful and "YOU FAILED" if they werent.
@@ -112,8 +115,9 @@ void printGameOver(string currentGuess) {
 void printGameBoard(string guess) {
 
 	cout << "+------------+\n"; //Working a new line so that it's easier to work with mentally
-	cout << "|"
-
+	cout << "|   " << currentGuessString << "   |\n";
+	cout << "+------------+\n";
+	//Theory that I use a while loop to print out the border, ask him while there
 	/*
 		This function will print out a rectangle to contain the
 		current guess and the line
